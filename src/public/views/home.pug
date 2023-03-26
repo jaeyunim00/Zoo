@@ -15,9 +15,11 @@ html(lang="en")
           input(type="text", placeholde="room name")
           button enter room
       div#call
-        video#myFace(autoplay, playsinline, width="50", height="50")
-        button#mute Mute
-        button#camera Turn Camera Off
-        select#cameras
+        div#myStream
+          video#myFace(autoplay, playsinline, width="50", height="50")
+          button#mute Mute
+          button#camera Turn Camera Off
+          select#cameras
+        video#peerFace(autoplay, playsinline, width="50", height="50")
     script(src="/socket.io/socket.io.js")
     script(src="/public/js/app.js")
