@@ -1,28 +1,20 @@
-import express from "express";
 import http from "http";
-import { Server } from "socket.io";
+import express from "express";
+import SocketIO from "socket.io";
 
 const app = express();
 
 app.set("view engine", "pug");
 app.set("views", __dirname + "/public/views");
 app.use("/public", express.static(__dirname + "/public"));
+app.get("/", (req, res) => res.render("home"));
+app.get("/*", (req, res) => res.redirect("/"));
 
-//TEMPLATE
-app.get("/", (req, res) => {
-  res.render("home");
-});
-app.get("/*", (req, res) => {
-  res.redirect("/");
-});
-
-//OPEN SERVER
 const httpServer = http.createServer(app);
-
-const io = new Server(httpServer);
+const io = SocketIO(httpServer);
 
 io.on("connection", (socket) => {
-  console.log("브라우저 연결됨");
+  console.log("broswer connected!");
   socket.on("join_room", (roomName) => {
     socket.join(roomName);
     socket.to(roomName).emit("welcome");
@@ -38,6 +30,6 @@ io.on("connection", (socket) => {
   });
 });
 
-httpServer.listen(4000, () => {
-  console.log(`http://localhost:4000`);
+httpServer.listen(3000, () => {
+  console.log(`http://localhost:3000`);
 });

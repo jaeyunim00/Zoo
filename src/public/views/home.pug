@@ -1,25 +1,33 @@
-doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="https://unpkg.com/mvp.css@1.12/mvp.css")
+    link(rel="stylesheet", href="../public/css/main.css")
     title Document
-  body
+  body 
     header
-      h1 Zoo
+      h1 WELCOME TO THE JUNGLE 🌿
     main
-      div#welcome
+      div#welcome 
+        h1 ROOM 🚪
         form
-          input(type="text", placeholde="room name")
-          button enter room
+          input(type="text", placeholder="type room name")
+          button Enter
       div#call
-        div#myStream
-          video#myFace(autoplay, playsinline, width="50", height="50")
-          button#mute Mute
-          button#camera Turn Camera Off
-          select#cameras
-        video#peerFace(autoplay, playsinline, width="50", height="50")
-    script(src="/socket.io/socket.io.js")
-    script(src="/public/js/app.js")
+        div.stream
+          div#myStream
+            video#myFace(autoplay, playsinline, width="350", height="350")
+            div#streamOption
+              button#audio Audio On
+              button#camera Camera On
+              select#cameras
+          video#peerFace(autoplay, playsinline, width="350", height="350")
+        div#chatRoom
+          h1 CHATTING ROOM 🌈
+          div#chat
+            ul
+          form
+            input(type="text", placeholder="message")
+    script(src="/socket.io/socket.io.js") 
+    script(src="../public/js/app.js") 

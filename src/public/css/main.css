@@ -1,0 +1,116 @@
+body {
+  background-image: url(../css/wood-board-background.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: block;
+  padding: 15px;
+  border-bottom: brown;
+  font-size: 18px;
+  color: black;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0px;
+  color: #fefee3;
+}
+
+video {
+  margin: 10px;
+}
+
+#welcome {
+  background-color: d4e09b;
+  height: 500px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* color: #f6f4d2; */
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+#welcome h1 {
+  color: #a44a3f;
+}
+
+#welcome form {
+  display: block;
+  /* border-radius: 15px; */
+  border: 3px solid #a44a3f;
+}
+
+#welcome form input {
+  height: 350px;
+  outline: none;
+  padding: 0px 10px;
+  background-color: #f19c79;
+  color: #f6f4d2;
+  font-weight: 700;
+  border: none;
+}
+
+#welcome form input::placeholder {
+  color: #f6f4d2;
+}
+
+#welcome form button {
+  height: 350px;
+  background-color: #a44a3f;
+  color: #f6f4d2;
+  font-weight: 700;
+  border: none;
+}
+
+#call {
+  display: flex;
+  color: #fefee3;
+}
+
+#chatRoom {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stream {
+  display: flex;
+  justify-content: center;
+}
+
+#chat {
+  background-color: #f6f4d2;
+  width: 700px;
+  height: 400px;
+  overflow-y: scroll;
+}
+
+#myStream {
+  display: flex;
+  flex-direction: column;
+}
+
+#chatRoom form input {
+  width: 700px;
+  height: 50px;
+  outline: none;
+  border: none;
+  padding: 15px;
+}
